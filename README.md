@@ -1,20 +1,44 @@
-# Introduction 
-TODO: Give a short introduction of your project. Let this section explain the objectives or the motivation behind this project. 
+# Kasboek Budget Tracker (Mobile-first PWA)
 
-# Getting Started
-TODO: Guide users through getting your code up and running on their own system. In this section you can talk about:
-1.	Installation process
-2.	Software dependencies
-3.	Latest releases
-4.	API references
+Dit project is een installable web app (PWA) voor Android en desktop.
 
-# Build and Test
-TODO: Describe and show how to build your code and run the tests. 
+## Bestanden
 
-# Contribute
-TODO: Explain how other users and developers can contribute to make your code better. 
+- `index.html` — hoofdapp
+- `manifest.json` — install-informatie voor Android/Chrome
+- `sw.js` — service worker (caching + offline fallback)
+- `offline.html` — fallback scherm zonder internet
+- `icon-192.png` en `icon-512.png` — app-iconen voor installatie
 
-If you want to learn more about creating good readme files then refer the following [guidelines](https://docs.microsoft.com/en-us/azure/devops/repos/git/create-a-readme?view=azure-devops). You can also seek inspiration from the below readme files:
-- [ASP.NET Core](https://github.com/aspnet/Home)
-- [Visual Studio Code](https://github.com/Microsoft/vscode)
-- [Chakra Core](https://github.com/Microsoft/ChakraCore)
+## Lokaal starten
+
+Open de app niet via `file://`, maar via een lokale webserver.
+
+### Optie 1: Python
+
+```bash
+python -m http.server 8080
+```
+
+Ga naar: `http://localhost:8080`
+
+### Optie 2: Node
+
+```bash
+npx serve . -l 8080
+```
+
+Ga naar: `http://localhost:8080`
+
+## Installeren op Android
+
+1. Open de app in Chrome op je Android telefoon.
+2. Tik op de knop **Installeer app** in de app (als zichtbaar).
+3. Of gebruik Chrome-menu `⋮` → **App installeren** / **Toevoegen aan startscherm**.
+
+Na installatie draait de app in standalone modus zoals een normale telefoon-app.
+
+## Opmerkingen
+
+- Data wordt lokaal opgeslagen in `localStorage` van de browser.
+- Voor productie moet je hosten via HTTPS (bijv. GitHub Pages, Netlify, Vercel of eigen domein).
