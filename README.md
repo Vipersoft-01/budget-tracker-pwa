@@ -22,6 +22,36 @@ python -m http.server 8080
 
 Ga naar: `http://localhost:8080`
 
+## Native Android app (Capacitor)
+
+Deze repo bevat nu ook een native Android wrapper via Capacitor.
+
+### Eerste setup
+
+```bash
+npm install
+```
+
+### Web assets naar native project syncen
+
+```bash
+npm run cap:sync
+```
+
+### Android project openen
+
+```bash
+npm run android:open
+```
+
+Open daarna in Android Studio:
+
+1. Wacht tot Gradle sync klaar is.
+2. Kies een telefoon (USB debugging) of emulator.
+3. Klik **Run** om APK te installeren op je toestel.
+
+Voor release build (Play Store): gebruik in Android Studio **Build > Generate Signed Bundle / APK**.
+
 ### Optie 2: Node
 
 ```bash
@@ -37,6 +67,8 @@ Ga naar: `http://localhost:8080`
 3. Of gebruik Chrome-menu `⋮` → **App installeren** / **Toevoegen aan startscherm**.
 
 Na installatie draait de app in standalone modus zoals een normale telefoon-app.
+
+> Met Capacitor krijg je een echte native app-installatie (APK), niet alleen browser-PWA.
 
 ## Gratis opslag via GitHub (backup/herstel)
 

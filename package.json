@@ -1,0 +1,26 @@
+{
+  "name": "personal---budgettracker",
+  "version": "1.0.0",
+  "description": "Dit project is een installable web app (PWA) voor Android en desktop.",
+  "main": "sw.js",
+  "scripts": {
+    "prepare:web": "node scripts/prepare-web.mjs",
+    "cap:sync": "npm run prepare:web && npx cap sync android",
+    "android:add": "npm run prepare:web && npx cap add android",
+    "android:open": "npx cap open android",
+    "android:run": "npm run cap:sync && npx cap run android",
+    "test": "echo \"No automated tests configured\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://dev.azure.com/DLWR-DLWR/DLWR%20-%20BRACKEM/_git/PERSONAL%20-%20BUDGETTRACKER"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@capacitor/android": "^8.1.0",
+    "@capacitor/cli": "^8.1.0",
+    "@capacitor/core": "^8.1.0"
+  }
+}
