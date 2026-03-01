@@ -38,6 +38,38 @@ Ga naar: `http://localhost:8080`
 
 Na installatie draait de app in standalone modus zoals een normale telefoon-app.
 
+## Gratis opslag via GitHub (backup/herstel)
+
+De app heeft nu twee knoppen:
+
+- `☁️ Backup GitHub`
+- `♻️ Herstel GitHub`
+
+De backup wordt versleuteld (AES-GCM) opgeslagen in een **private GitHub Gist**.
+
+### Eenmalig: GitHub token maken
+
+1. Ga naar GitHub → Settings → Developer settings → Personal access tokens.
+2. Maak een token met alleen scope: `gist`.
+3. Bewaar dit token veilig.
+
+### Backup
+
+1. Klik `☁️ Backup GitHub`.
+2. Vul token in.
+3. Kies een encryptie-wachtwoord.
+4. Laat Gist ID leeg om een nieuwe backup-gist te maken, of vul een bestaande in om te updaten.
+
+### Herstel
+
+1. Klik `♻️ Herstel GitHub`.
+2. Vul token in.
+3. Vul Gist ID in.
+4. Vul hetzelfde encryptie-wachtwoord in.
+
+> Het token wordt niet permanent opgeslagen in de app.
+> Zonder het juiste wachtwoord kan de backup niet gelezen worden.
+
 ## Opmerkingen
 
 - Data wordt lokaal opgeslagen in `localStorage` van de browser.
